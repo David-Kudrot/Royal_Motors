@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+
+<div class="header">
+    <h1 class="display-2 fw-bold brand-name ">
+        ROYAL MOTORS
+    </h1>
+    <p class="title fs-5 text-warning">"Empowering journeys, crafted with royal elegance, await at Royal Motors."</p>
+    <img class="back-img" src="{% static 'photos/wp10472049-red-and-black-car-wallpapers.jpg' %}" alt="">
+</div>
+
+
+<div class="container mt-5 mb-5">
+    <h2 class="mb-3">Show Category Wise ></h2>
+    <div class="d-flex flex-wrap">
+        {% for brand in all_brands %}
+        <div class="">
+            <div class="form-check">
+                <label class="form-check-label fw-bolder" for="{{brand.id}}">
+                <a class="btn btn-success custom-a" href="{% url 'brand_wise_cars' brand.slug %}">
+                        {{brand.name}}
+                </a>
+                </label>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <h3 class="mt-5 mb-5">Total Car Found : {{ total_cars }}</h3>
+</div>
+
+
+<div class="container mt-4">
+    <div class="row">
+        {% for car in cars%}
+        <div class="col-md-3 mb-3">
+            <div class="card border border-info">
+                <div class="img-wrapper">
+                    <img src="{{ car.photo.url }}" class="card-img-top img-custom" alt="{{ car.name }}">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">{{ car.name }}</h5>
+                    <p class="card-text fw-semibold">Price: ${{ car.price }}</p>
+                    <p class="card-text">Brand: {{ car.brand.name }}</p>
+                    <a href="{% url 'car_detail' car.pk %}" class="btn btn-primary mx-auto">View Details</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+
+
+
+
+
+
+{% endblock content %}
