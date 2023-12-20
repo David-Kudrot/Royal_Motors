@@ -47,7 +47,7 @@ class UserLoginView(LoginView):
     
     #if success_url and reverse_lazy not work then do this function
     def get_success_url(self):
-        messages.success(self.request, "Logged in successful!")
+        # messages.success(self.request, "Logged in successful!")
         return reverse_lazy('home')
     
     def form_valid(self, form):

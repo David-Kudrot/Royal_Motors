@@ -81,6 +81,38 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -290,7 +322,7 @@
         "documentation": {}
     },
     {
-        "label": "CarModel",
+        "label": "CommentModel",
         "importPath": "cars.models",
         "description": "cars.models",
         "isExtraImport": true,
@@ -319,6 +351,30 @@
         "description": "cars.models",
         "isExtraImport": true,
         "detail": "cars.models",
+        "documentation": {}
+    },
+    {
+        "label": "CarModel",
+        "importPath": "cars.models",
+        "description": "cars.models",
+        "isExtraImport": true,
+        "detail": "cars.models",
+        "documentation": {}
+    },
+    {
+        "label": "forms",
+        "importPath": "django",
+        "description": "django",
+        "isExtraImport": true,
+        "detail": "django",
+        "documentation": {}
+    },
+    {
+        "label": "forms",
+        "importPath": "django",
+        "description": "django",
+        "isExtraImport": true,
+        "detail": "django",
         "documentation": {}
     },
     {
@@ -418,6 +474,14 @@
         "documentation": {}
     },
     {
+        "label": "UpdateView",
+        "importPath": "django.views.generic",
+        "description": "django.views.generic",
+        "isExtraImport": true,
+        "detail": "django.views.generic",
+        "documentation": {}
+    },
+    {
         "label": "os",
         "kind": 6,
         "isExtraImport": true,
@@ -499,19 +563,27 @@
         "documentation": {}
     },
     {
+        "label": "Purchase",
+        "importPath": "user.models",
+        "description": "user.models",
+        "isExtraImport": true,
+        "detail": "user.models",
+        "documentation": {}
+    },
+    {
+        "label": "CommentForm",
+        "importPath": "cars.forms",
+        "description": "cars.forms",
+        "isExtraImport": true,
+        "detail": "cars.forms",
+        "documentation": {}
+    },
+    {
         "label": "get_wsgi_application",
         "importPath": "django.core.wsgi",
         "description": "django.core.wsgi",
         "isExtraImport": true,
         "detail": "django.core.wsgi",
-        "documentation": {}
-    },
-    {
-        "label": "forms",
-        "importPath": "django",
-        "description": "django",
-        "isExtraImport": true,
-        "detail": "django",
         "documentation": {}
     },
     {
@@ -540,6 +612,14 @@
     },
     {
         "label": "UserCreationForm",
+        "importPath": "django.contrib.auth.forms",
+        "description": "django.contrib.auth.forms",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.forms",
+        "documentation": {}
+    },
+    {
+        "label": "UserChangeForm",
         "importPath": "django.contrib.auth.forms",
         "description": "django.contrib.auth.forms",
         "isExtraImport": true,
@@ -603,6 +683,14 @@
         "documentation": {}
     },
     {
+        "label": "UpdateForm",
+        "importPath": "user.forms",
+        "description": "user.forms",
+        "isExtraImport": true,
+        "detail": "user.forms",
+        "documentation": {}
+    },
+    {
         "label": "LoginView",
         "importPath": "django.contrib.auth.views",
         "description": "django.contrib.auth.views",
@@ -612,6 +700,14 @@
     },
     {
         "label": "LogoutView",
+        "importPath": "django.contrib.auth.views",
+        "description": "django.contrib.auth.views",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.views",
+        "documentation": {}
+    },
+    {
+        "label": "PasswordChangeView",
         "importPath": "django.contrib.auth.views",
         "description": "django.contrib.auth.views",
         "isExtraImport": true,
@@ -699,6 +795,24 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "cars.migrations.0003_carmodel_quantity",
+        "description": "cars.migrations.0003_carmodel_quantity",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('cars', '0002_carmodel_details'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='carmodel',\n            name='quantity',\n            field=models.IntegerField(blank=True, null=True),\n        ),",
+        "detail": "cars.migrations.0003_carmodel_quantity",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "cars.migrations.0004_commentmodel",
+        "description": "cars.migrations.0004_commentmodel",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('cars', '0003_carmodel_quantity'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='CommentModel',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('name', models.CharField(max_length=100)),",
+        "detail": "cars.migrations.0004_commentmodel",
+        "documentation": {}
+    },
+    {
         "label": "CarsConfig",
         "kind": 6,
         "importPath": "cars.apps",
@@ -708,11 +822,29 @@
         "documentation": {}
     },
     {
+        "label": "CommentForm",
+        "kind": 6,
+        "importPath": "cars.forms",
+        "description": "cars.forms",
+        "peekOfCode": "class CommentForm(forms.ModelForm):\n    class Meta:\n        model = CommentModel\n        fields = ['name', 'email', 'body']",
+        "detail": "cars.forms",
+        "documentation": {}
+    },
+    {
         "label": "CarModel",
         "kind": 6,
         "importPath": "cars.models",
         "description": "cars.models",
-        "peekOfCode": "class CarModel(models.Model):\n    name = models.CharField(max_length=100)\n    price = models.DecimalField(max_digits=10, decimal_places=2)\n    photo = models.ImageField(upload_to='images/', blank=True)\n    brand = models.ForeignKey(BrandModel, on_delete=models.CASCADE)\n    details = models.TextField(blank=True, null=True, max_length=200)\n    def __str__(self) -> str:\n        return f\"{self.brand.name} - {self.name}\"",
+        "peekOfCode": "class CarModel(models.Model):\n    name = models.CharField(max_length=100)\n    price = models.DecimalField(max_digits=10, decimal_places=2)\n    photo = models.ImageField(upload_to='images/', blank=True)\n    brand = models.ForeignKey(BrandModel, on_delete=models.CASCADE)\n    details = models.TextField(blank=True, null=True, max_length=200)\n    quantity = models.IntegerField(null=True, blank=True)\n    def __str__(self) -> str:\n        return f\"{self.brand.name} - {self.name}\"\nclass CommentModel(models.Model):",
+        "detail": "cars.models",
+        "documentation": {}
+    },
+    {
+        "label": "CommentModel",
+        "kind": 6,
+        "importPath": "cars.models",
+        "description": "cars.models",
+        "peekOfCode": "class CommentModel(models.Model):\n    car = models.ForeignKey(CarModel, on_delete=models.CASCADE, related_name=\"comments\")\n    name=models.CharField(max_length=100)\n    email = models.EmailField(max_length=100)\n    body = models.TextField(max_length=200)\n    comment_date = models.DateTimeField(auto_now_add=True)\n    def __str__(self) -> str:\n        return f\"{self.name}\"",
         "detail": "cars.models",
         "documentation": {}
     },
@@ -946,7 +1078,7 @@
         "kind": 5,
         "importPath": "car_sales_project.urls",
         "description": "car_sales_project.urls",
-        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    # path('', ShowCarsCreateView.as_view(), name='home'),#class based\n    path('', views.home, name = 'home'),#function based\n    path('brand/<slug:category_slug>/', views.home, name='brand_wise_cars'),\n    path('car/<int:pk>/', ShowDetails.as_view(), name='car_detail'),\n    path('buy/<int:pk>/', ShowDetails.as_view(), name='buy_car'),\n    path('profile/', UserProfileView.as_view(), name='profile'),\n    path('user/', include('user.urls')),\n    path('cars/', include('cars.urls')),",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    # path('', ShowCarsCreateView.as_view(), name='home'),#class based\n    path('', views.home, name = 'home'),#function based\n    path('brand/<slug:category_slug>/', views.home, name='brand_wise_cars'),\n    path('car/<int:pk>/', ShowDetails.as_view(), name='car_detail'),\n    path('buy/<int:pk>/', ShowDetails.as_view(), name='buy_car'),\n    path('user/', include('user.urls')),\n    path('cars/', include('cars.urls')),\n]",
         "detail": "car_sales_project.urls",
         "documentation": {}
     },
@@ -955,16 +1087,7 @@
         "kind": 6,
         "importPath": "car_sales_project.views",
         "description": "car_sales_project.views",
-        "peekOfCode": "class ShowDetails(DetailView):\n    model = CarModel\n    template_name = 'details.html'\n    context_object_name = 'car'\n    def get_context_data(self, **kwargs):\n        context = super().get_context_data(**kwargs)\n        current_car = self.get_object()\n        current_brand = current_car.brand\n        total_cars_found = CarModel.objects.filter(brand=current_brand).count()\n        context['total_cars_found'] = total_cars_found",
-        "detail": "car_sales_project.views",
-        "documentation": {}
-    },
-    {
-        "label": "UserProfileView",
-        "kind": 6,
-        "importPath": "car_sales_project.views",
-        "description": "car_sales_project.views",
-        "peekOfCode": "class UserProfileView(CreateView):\n    def get(self, request):\n        user = request.user\n        # Fetch purchases for the current user\n        user_purchases = Purchase.objects.filter(user=user)\n        return render(request, 'profile.html', {'user': user, 'purchases': user_purchases})",
+        "peekOfCode": "class ShowDetails(DetailView):\n    model = CarModel\n    template_name = 'details.html'\n    context_object_name = 'car'\n    pk_url_kwarg = 'pk'\n    def get_context_data(self, **kwargs):\n        # context = super().get_context_data(**kwargs)\n        # current_car = self.get_object()\n        # current_brand = current_car.brand\n        # total_cars_found = CarModel.objects.filter(brand=current_brand).count()",
         "detail": "car_sales_project.views",
         "documentation": {}
     },
@@ -1009,7 +1132,16 @@
         "kind": 6,
         "importPath": "user.forms",
         "description": "user.forms",
-        "peekOfCode": "class UserRegistrationForm(UserCreationForm):\n    class Meta:\n        model = User\n        fields = ['username', 'first_name', 'last_name', 'email']",
+        "peekOfCode": "class UserRegistrationForm(UserCreationForm):\n    class Meta:\n        model = User\n        fields = ['username', 'first_name', 'last_name', 'email']\nclass UpdateForm(UserChangeForm):\n    password = None\n    class Meta:\n        model = User\n        fields = ['username', 'first_name', 'last_name', 'email']",
+        "detail": "user.forms",
+        "documentation": {}
+    },
+    {
+        "label": "UpdateForm",
+        "kind": 6,
+        "importPath": "user.forms",
+        "description": "user.forms",
+        "peekOfCode": "class UpdateForm(UserChangeForm):\n    password = None\n    class Meta:\n        model = User\n        fields = ['username', 'first_name', 'last_name', 'email']",
         "detail": "user.forms",
         "documentation": {}
     },
@@ -1027,7 +1159,7 @@
         "kind": 5,
         "importPath": "user.urls",
         "description": "user.urls",
-        "peekOfCode": "urlpatterns = [\n    path('register/', UserRegistrationView.as_view(), name='register'),\n    path('login/', UserLoginView.as_view(), name='login'),\n    # path('profile/', UserProfileView.as_view(), name='profile'),\n    path('logout/', views.log_out, name='logout'),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('register/', UserRegistrationView.as_view(), name='register'),\n    path('login/', UserLoginView.as_view(), name='login'),\n    path('profile/', UserProfileView.as_view(), name='profile'),\n    path('update_profile/<int:pk>/', UpdateUser.as_view(), name='update_profile'),\n    path('logout/', views.log_out, name='logout'),\n    path('buy/<int:id>/', views.buy_car, name='buy'),\n    path('change_password/', PasswordChange.as_view(), name='change_password'),\n]",
         "detail": "user.urls",
         "documentation": {}
     },
@@ -1045,7 +1177,34 @@
         "kind": 6,
         "importPath": "user.views",
         "description": "user.views",
-        "peekOfCode": "class UserLoginView(LoginView):\n    template_name = 'login.html'\n    #if success_url and reverse_lazy not work then do this function\n    def get_success_url(self):\n        messages.success(self.request, \"Logged in successful!\")\n        return reverse_lazy('profile')\n    def form_valid(self, form):\n        # messages.success(self.request, \"Logged in successful!\")# eta dile log our korar time a logout message and login message ek sathe dekhabe\n        return super().form_valid(form)\n    def form_invalid(self, form):",
+        "peekOfCode": "class UserLoginView(LoginView):\n    template_name = 'login.html'\n    #if success_url and reverse_lazy not work then do this function\n    def get_success_url(self):\n        # messages.success(self.request, \"Logged in successful!\")\n        return reverse_lazy('home')\n    def form_valid(self, form):\n        # messages.success(self.request, \"Logged in successful!\")# eta dile log our korar time a logout message and login message ek sathe dekhabe\n        return super().form_valid(form)\n    def form_invalid(self, form):",
+        "detail": "user.views",
+        "documentation": {}
+    },
+    {
+        "label": "UserProfileView",
+        "kind": 6,
+        "importPath": "user.views",
+        "description": "user.views",
+        "peekOfCode": "class UserProfileView(CreateView):\n    template_name = \"profile.html\"\n    def get(self, request, *args, **kwargs):\n        context = Purchase.objects.filter(user=request.user)\n        # print(context)\n        return render(request, 'profile.html', {'context': context})  \ndef log_out(request):\n    messages.success(request, \"Logged out successfully!\")\n    logout(request)\n    return redirect('login')",
+        "detail": "user.views",
+        "documentation": {}
+    },
+    {
+        "label": "UpdateUser",
+        "kind": 6,
+        "importPath": "user.views",
+        "description": "user.views",
+        "peekOfCode": "class UpdateUser(UpdateView):\n    model = User\n    template_name = 'register.html'\n    form_class = UpdateForm\n    success_url = reverse_lazy('profile')\n    def get_context_data(self, **kwargs):\n        context =  super().get_context_data(**kwargs)\n        context['type'] = 'Update Profile'\n        return context\nclass PasswordChange(PasswordChangeView):",
+        "detail": "user.views",
+        "documentation": {}
+    },
+    {
+        "label": "PasswordChange",
+        "kind": 6,
+        "importPath": "user.views",
+        "description": "user.views",
+        "peekOfCode": "class PasswordChange(PasswordChangeView):\n    template_name = 'register.html'\n    success_url = reverse_lazy('profile')\n    def form_valid(self, form):\n        return super().form_valid(form)",
         "detail": "user.views",
         "documentation": {}
     },
@@ -1054,7 +1213,16 @@
         "kind": 2,
         "importPath": "user.views",
         "description": "user.views",
-        "peekOfCode": "def log_out(request):\n    messages.success(request, \"Logged out successfully!\")\n    logout(request)\n    return redirect('login')",
+        "peekOfCode": "def log_out(request):\n    messages.success(request, \"Logged out successfully!\")\n    logout(request)\n    return redirect('login')\ndef buy_car(request, id):\n    data = CarModel.objects.get(pk = id)\n    qnt = data.quantity\n    if qnt > 0:\n        qnt -= 1\n        data.quantity = qnt",
+        "detail": "user.views",
+        "documentation": {}
+    },
+    {
+        "label": "buy_car",
+        "kind": 2,
+        "importPath": "user.views",
+        "description": "user.views",
+        "peekOfCode": "def buy_car(request, id):\n    data = CarModel.objects.get(pk = id)\n    qnt = data.quantity\n    if qnt > 0:\n        qnt -= 1\n        data.quantity = qnt\n        data.save()\n        Purchase.objects.create(user=request.user, car = data)\n        return redirect('profile')\n    return render(request, 'details.html', {'car': data})",
         "detail": "user.views",
         "documentation": {}
     },

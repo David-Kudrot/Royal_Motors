@@ -6,6 +6,7 @@ from cars.models import CarModel
 from brands.models import BrandModel
 from user.models import Purchase
 from django.shortcuts import get_object_or_404
+from cars.forms import CommentForm
 
 
 
@@ -26,28 +27,33 @@ class ShowDetails(DetailView):
     model = CarModel
     template_name = 'details.html'
     context_object_name = 'car'
+    pk_url_kwarg = 'pk'
     
     def get_context_data(self, **kwargs):
+        # context = super().get_context_data(**kwargs)
+        # current_car = self.get_object()
+        # current_brand = current_car.brand
+        # total_cars_found = CarModel.objects.filter(brand=current_brand).count()
+
+        # context['total_cars_found'] = total_cars_found
+        # return context
         context = super().get_context_data(**kwargs)
-        current_car = self.get_object()
-        current_brand = current_car.brand
-        total_cars_found = CarModel.objects.filter(brand=current_brand).count()
-
-        context['total_cars_found'] = total_cars_found
+        car = self.object
+        comments = car.comments.all()
+        comment_form = CommentForm()
+        
+        context['comments'] = comments
+        context['comment_form'] = comment_form
         return context
-    # def post(self, request, *args, **kwargs):
-    #     if request.user.is_authenticated:
-    #         car = self.get_object()
-    #         Purchase.objects.create(user=request.user, car=car)
-            
-    #         current_brand = car.brand
-    #         total_cars_found = CarModel.objects.filter(brand=current_brand).exclude(pk=car.pk).count()
-
-    #         if total_cars_found > 0:
-    #             # Update the count
-    #             car_to_update = get_object_or_404(CarModel, pk=car.pk)
-    #             car_to_update.available_quantity = total_cars_found
-    #             car_to_update.save()
+    def post(self, request, *args, **kwargs):
+        comment_form = CommentForm(data = self.request.POST)
+        car = self.get_object()
+        if comment_form.is_valid():
+            new_comment = comment_form.save(commit=False)
+            new_comment.car = car
+            new_comment.save()
+        return self.get(request, *args, **kwargs)
+        
             
             
 
